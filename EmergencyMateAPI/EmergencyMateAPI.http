@@ -1,0 +1,6 @@
+@EmergencyMateAPI_HostAddress = http://localhost:5101
+
+GET {{EmergencyMateAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
