@@ -1,16 +1,16 @@
-EmergencyMate
+# EmergencyMate
 
 EmergencyMate is an Android application designed to provide users with quick access to emergency information and essential resources from a single platform.
 
 The project was developed as part of my university studies, focusing on mobile application development, REST API integration, backend development, database management, and user authentication.
 
-OVERVIEW
+## Overview
 
 EmergencyMate brings together several emergency-related resources within a single mobile application. Users can register and log into the application, access emergency contacts, view emergency protocols, use an interactive map, and consult information related to emergency preparedness.
 
 The application follows a client-server architecture, with an Android client communicating with an ASP.NET Core Web API connected to a SQL Server database.
 
-FEATURES
+## Features
 
 * User registration and login
 * Emergency contact information
@@ -21,9 +21,9 @@ FEATURES
 * Emergency-related news
 * User data management through a backend API
 
-TECHNOLOGIES
+## Technologies
 
-Mobile Application
+**Mobile Application**
 
 * Kotlin
 * Android Studio
@@ -32,61 +32,66 @@ Mobile Application
 * Retrofit
 * Gson
 
-Backend
+**Backend**
 
 * C#
 * ASP.NET Core Web API
 * REST API
 
-Database
+**Database**
 
 * Microsoft SQL Server
 
-Tools
+**Tools**
 
 * Git
 * GitHub
 * Android Emulator
 
-ARCHITECTURE
+## Architecture
 
-The application uses a client-server architecture.
+The application uses a client-server architecture:
 
+```text
 Android Application
-|
-| HTTP / REST API
-v
+        |
+        | HTTP / REST API
+        v
 ASP.NET Core Web API
-|
-| Database Operations
-v
+        |
+        | Database Operations
+        v
 Microsoft SQL Server
+```
 
 The Android application communicates with the backend through REST API endpoints. The backend handles requests and manages the application's interaction with the SQL Server database.
 
-AUTHENTICATION
+## Authentication
 
 EmergencyMate includes a registration and login system connected to the backend.
 
 The authentication flow is:
 
+```text
 Android Application
-|
-v
+        |
+        v
 Retrofit
-|
-v
+        |
+        v
 ASP.NET Core API
-|
-v
+        |
+        v
 SQL Server
+```
 
 User registration includes information such as name, surname, email, and password. The Android application sends this information to the API, which processes and stores the data in the database.
 
-PROJECT STRUCTURE
+## Project Structure
 
 The Android application is organized into activities, API services, data models, layouts, and resources.
 
+```text
 EmergencyMate
 ├── LoginActivity
 ├── RegisterActivity
@@ -98,12 +103,13 @@ EmergencyMate
 ├── activity_login.xml
 ├── activity_register.xml
 └── Resources
+```
 
-SCREENSHOTS
+## Screenshots
 
 Screenshots of the main application screens will be included here to demonstrate the user interface and functionality.
 
-DEVELOPMENT GOALS
+## Development Goals
 
 This project was developed to gain practical experience in:
 
@@ -116,7 +122,7 @@ This project was developed to gain practical experience in:
 * Git and GitHub version control
 * Mobile user interface development
 
-FUTURE IMPROVEMENTS
+## Future Improvements
 
 Potential future improvements include:
 
@@ -127,8 +133,10 @@ Potential future improvements include:
 * Additional security measures
 * Expanded emergency resources
 
-AUTHOR
+## Author
 
-Hilary Rodríguez
+**Hilary Rodríguez**
 
 Software Development Student
+
+[GitHub Profile](https://github.com/your-github-username)
