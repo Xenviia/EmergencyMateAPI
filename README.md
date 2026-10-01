@@ -1,143 +1,109 @@
-# EmergencyMate
+EmergencyMateAPI
 
-EmergencyMate is an Android application designed to provide users with quick access to emergency information and essential resources from a single platform.
+EmergencyMateAPI is the backend component of EmergencyMate, an Android application designed to provide users with access to emergency information and resources.
 
-The project was developed as part of my university studies, focusing on mobile application development, REST API integration, backend development, database management, and user authentication.
+The API was developed using ASP.NET Core and provides the backend services required for communication between the Android application and the database.
 
-## Overview
+OVERVIEW
 
-EmergencyMate brings together several emergency-related resources within a single mobile application. Users can register and log into the application, access emergency contacts, view emergency protocols, use an interactive map, and consult information related to emergency preparedness.
+EmergencyMateAPI follows a client-server architecture in which the Android application acts as the client and communicates with the backend through HTTP requests.
 
-The application follows a client-server architecture, with an Android client communicating with an ASP.NET Core Web API connected to a SQL Server database.
+The API is responsible for receiving requests from the mobile application, processing application logic, and interacting with the database.
 
-## Features
+ARCHITECTURE
 
-* User registration and login
-* Emergency contact information
-* Emergency alert section
-* Emergency protocols and evacuation information
-* Virtual emergency kit
-* Interactive map
-* Emergency-related news
-* User data management through a backend API
+Android Application
+|
+| HTTP Requests
+v
+ASP.NET Core Web API
+|
+| Database Operations
+v
+Microsoft SQL Server
 
-## Technologies
-
-**Mobile Application**
-
-* Kotlin
-* Android Studio
-* XML
-* ConstraintLayout
-* Retrofit
-* Gson
-
-**Backend**
+TECHNOLOGIES
 
 * C#
+* ASP.NET Core
 * ASP.NET Core Web API
 * REST API
-
-**Database**
-
 * Microsoft SQL Server
-
-**Tools**
-
+* Visual Studio
 * Git
 * GitHub
-* Android Emulator
 
-## Architecture
+PROJECT STRUCTURE
 
-The application uses a client-server architecture:
+EmergencyMateAPI
+├── EmergencyMateAPI.sln
+├── EmergencyMateAPI
+└── README.md
 
-```text
+API ROLE
+
+The backend provides the communication layer between the Android application and the database.
+
+The mobile application sends HTTP requests to the API, which processes those requests and returns the corresponding responses.
+
+The API is responsible for handling application data without requiring the Android application to communicate directly with the database.
+
+INTEGRATION WITH EMERGENCYMATE
+
+EmergencyMate is divided into two main components:
+
+Mobile Application
+Kotlin-based Android application responsible for the user interface and user interaction.
+
+Backend API
+ASP.NET Core Web API responsible for processing requests and communicating with the database.
+
+The two components communicate through REST API endpoints.
+
+REQUEST FLOW
+
 Android Application
-        |
-        | HTTP / REST API
-        v
-ASP.NET Core Web API
-        |
-        | Database Operations
-        v
-Microsoft SQL Server
-```
-
-The Android application communicates with the backend through REST API endpoints. The backend handles requests and manages the application's interaction with the SQL Server database.
-
-## Authentication
-
-EmergencyMate includes a registration and login system connected to the backend.
-
-The authentication flow is:
-
-```text
+|
+v
+HTTP Request
+|
+v
+EmergencyMateAPI
+|
+v
+Application Logic
+|
+v
+Database
+|
+v
+HTTP Response
+|
+v
 Android Application
-        |
-        v
-Retrofit
-        |
-        v
-ASP.NET Core API
-        |
-        v
-SQL Server
-```
 
-User registration includes information such as name, surname, email, and password. The Android application sends this information to the API, which processes and stores the data in the database.
-
-## Project Structure
-
-The Android application is organized into activities, API services, data models, layouts, and resources.
-
-```text
-EmergencyMate
-├── LoginActivity
-├── RegisterActivity
-├── MenuInicio
-├── ApiClient
-├── ApiService
-├── LoginRequest
-├── LoginResponse
-├── activity_login.xml
-├── activity_register.xml
-└── Resources
-```
-
-## Screenshots
-
-Screenshots of the main application screens will be included here to demonstrate the user interface and functionality.
-
-## Development Goals
+PROJECT PURPOSE
 
 This project was developed to gain practical experience in:
 
-* Android application development with Kotlin
-* REST API development and integration
-* Client-server communication
-* Backend development with ASP.NET Core
-* SQL Server database management
-* User authentication
+* Backend development with C#
+* ASP.NET Core Web API development
+* REST API integration
+* Client-server architecture
+* Database communication
+* API design
+* Backend integration with an Android application
 * Git and GitHub version control
-* Mobile user interface development
 
-## Future Improvements
+RELATED PROJECT
 
-Potential future improvements include:
+EmergencyMate is the Android client that consumes this API.
 
-* Google and Facebook authentication
-* Push notifications for emergency alerts
-* Enhanced location-based services
-* Real-time emergency information
-* Additional security measures
-* Expanded emergency resources
+Android Application:
+https://github.com/Xenviia/EmergencyMate
 
-## Author
+AUTHOR
 
-**Hilary Rodríguez**
+Hilary Rodríguez
 
 Software Development Student
-
-[GitHub Profile](https://github.com/Xenviia)
-
